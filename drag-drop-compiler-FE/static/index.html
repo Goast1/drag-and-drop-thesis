@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <script src="./scripts/index.js"></script>
+
+    <script src="./scripts/globals.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <h1>Python Learning App</h1>
+        </div>
+        <div class="navbar-menu" id="open-navbar1">
+          <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./pages/code.html">Code</a></li>
+            <li><a href="./pages/code.html#new">New Code</a></li>
+            <li>
+              <a href="#login" onclick="openPopupWindowLogin('login')">Login</a>
+            </li>
+            <li>
+              <a href="#register" onclick="openPopupWindowLogin('register')"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2 class="section-title">Current Projects</h2>
+    <div class="swiper-container" id="projects">
+      <div class="swiper-wrapper"></div>
+    </div>
+    <div
+      class="div"
+      style="
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+      "
+    >
+      <h2 style="color: black; flex: 1">
+        This Python teaching app using blocks is an easy and enjoyable way to
+        learn programming. It offers interactive exercises and step-by-step
+        instructions that make it accessible to all learners, even beginners.
+        The visual programming blocks help users understand coding concepts and
+        logic, making it a great starting point for anyone interested in
+        learning Python.
+      </h2>
+      <iframe
+        style="flex: 1"
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/53vTc5iROz0?si=wJZW0CtQDDAGhrVp"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="overlay" style="display: none">
+      <div id="popupDiv"></div>
+    </div>
+    <footer>&copy; Python Learning App</footer>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!-- Popup form for If Statement -->
+<form
+  action="javascript:void(0)"
+  onsubmit="update_block(event)"
+  id="Form"
+  class="3"
+>
+  <label for="conditionType">Condition Type:</label>
+  <select
+    id="conditionType"
+    name="conditionType"
+    required
+    onchange="handleConditionChange(this)"
+  >
+    <option selected disabled hidden></option>
+    <option value="compare">Compare two values</option>
+    <option value="valueCheck">Check a single value</option></select
+  ><br /><br />
+
+  <div id="compareValues">
+    <label for="value1">Value 1:</label>
+    <input type="text" id="value1" name="var" /><br /><br />
+    <label for="comparison">Comparison:</label>
+    <select id="comparison" name="code" required>
+      <option value="==">is equal to</option>
+      <option value="!=">is not equal to</option>
+      <option value="<">is less than</option>
+      <option value=">">is greater than</option></select
+    ><br /><br />
+    <label for="value2">Value 2:</label>
+    <input type="text" id="value2" name="val" /><br /><br />
+  </div>
+
+  <div id="singleValueCheck">
+    <label for="checkValue">Value:</label>
+    <input type="text" id="checkValue" name="var" /><br /><br />
+    <label for="truthiness">Condition:</label>
+    <select id="truthiness" name="code">
+      <option value="">is true</option>
+      <option value="not">is false</option></select
+    ><br /><br />
+  </div>
+  <input type="submit" value="Save" />
+</form>

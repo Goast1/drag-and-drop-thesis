@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../styles/code.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <script src="../scripts/code.js"></script>
+    <script src="../scripts/globals.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <h1>Python Learning App</h1>
+        </div>
+        <div class="navbar-menu" id="open-navbar1">
+          <ul class="navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="code.html#new">New Code</a></li>
+
+            <li>
+              <a href="#login" onclick="openPopupWindowLogin('login')">Login</a>
+            </li>
+            <li>
+              <a href="#register" onclick="openPopupWindowLogin('register')"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="sidebar">
+        <div
+          class="draggable-block"
+          id="var"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>Variable</p>
+        </div>
+        <div
+          class="draggable-block"
+          id="if"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>If statement</p>
+        </div>
+        <div
+          class="else-inactive draggable-block"
+          id="else"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>Else</p>
+        </div>
+        <div
+          class="draggable-block"
+          id="loop"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>Loop</p>
+        </div>
+        <div
+          class="draggable-block"
+          id="print"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>Print</p>
+        </div>
+        <div
+          class="draggable-block"
+          id="end"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <p>End</p>
+        </div>
+      </div>
+      <div
+        id="drag-container"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <p class="hidden">Drag and drop here</p>
+      </div>
+      <div id="code-area">
+        <p class="hidden" id="code-output">Generated Code</p>
+        <div id="generated-code"></div>
+        <button class="compile-button" onclick="compile()">Compile</button>
+        <button
+          class="compile-button"
+          onclick="openPopupWindow(this.id, false, false, true)"
+        >
+          Save
+        </button>
+        <button
+          id="projects"
+          class="compile-button"
+          onclick="openPopupWindow(this.id, false, true)"
+        >
+          Load
+        </button>
+
+        <div id="compile-output"></div>
+      </div>
+    </div>
+    <div id="overlay">
+      <div id="popupDiv"></div>
+    </div>
+    <footer>&copy; 2023 Python Learning App</footer>
+  </body>
+</html>

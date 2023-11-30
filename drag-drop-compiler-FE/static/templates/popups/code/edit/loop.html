@@ -1,0 +1,57 @@
+<!-- Popup form for Loop Statement -->
+<form
+  action="javascript:void(0)"
+  onsubmit="update_block(event)"
+  id="Form"
+  class="2"
+>
+  <label for="conditionType">Loop Type:</label>
+  <select
+    id="LoopType"
+    name="tag"
+    required
+    onchange="handleConditionChangeLoop(this)"
+  >
+    <option selected disabled hidden></option>
+    <option value="while">While</option>
+    <option value="for">For</option></select
+  ><br /><br />
+
+  <div id="while">
+    <label for="value1">Value 1:</label>
+    <input type="text" id="value1" name="var" /><br /><br />
+
+    <label for="comparison">Condition:</label>
+    <select
+      id="comparison"
+      name="code"
+      onchange="handleConditionChangeInnerLoop(this)"
+    >
+      <option value="==">is equal to</option>
+      <option value="!=">is not equal to</option>
+      <option value="<">is less than</option>
+      <option value=">">is greater than</option>
+      <option value="">is true</option>
+      <option value="not">is false</option></select
+    ><br /><br />
+    <div id="secondVal" class="visible">
+      <label for="value2">Value 2:</label>
+      <input type="text" id="value2" name="val" /><br /><br />
+    </div>
+  </div>
+
+  <div id="for">
+    <label for="checkValue">Value 1:</label>
+    <input type="text" id="checkValue" name="var" /><br /><br />
+
+    <label for="truthiness">For loop:</label>
+    <select id="truthiness" name="code">
+      <option value="range">in range</option>
+      <option value="range_len">in range length</option>
+      <option value="in">in</option></select
+    ><br /><br />
+    <label for="checkValue">Value 2:</label>
+    <input type="text" id="checkValue" name="val" /><br /><br />
+  </div>
+  <input type="submit" value="Save" />
+</form>

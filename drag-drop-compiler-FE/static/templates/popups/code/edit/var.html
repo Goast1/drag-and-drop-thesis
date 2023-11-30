@@ -1,0 +1,22 @@
+<!-- Popup form for Variables -->
+<form
+  action="javascript:void(0)"
+  onsubmit="update_block(event)"
+  id="form"
+  class="0"
+>
+  <label for="variableName">Variable Name:</label>
+  <input type="text" id="variableName" name="var" required /><br /><br />
+
+  <label for="variableType">Variable Type:</label>
+  <select id="variableType" name="code" required>
+    <option value="string">String</option>
+    <option value="integer">Integer</option>
+    <option value="boolean">Boolean</option>
+    <br /><br />
+  </select>
+  <label for="initialValue">Initial Value:</label>
+  <input type="text" id="initialValue" name="val" />
+  <br /><br />
+  <input type="submit" value="Save" />
+</form>
